@@ -1,0 +1,27 @@
+
+.giratorio {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* Profundidad de perspectiva para 3D */
+    cursor: pointer;
+}
+
+.contenido_inicial {
+    display: block;
+    transition: transform 0.5s ease; /* Animación de transformación */
+}
+
+.contenido_girado {
+    display: none;
+    transform: rotateY(180deg); /* Gira 180 grados horizontalmente */
+    transition: transform 0.5s ease; /* Animación de transformación */
+}
+
+.giratorio:hover .contenido_inicial {
+    transform: rotateY(180deg); /* Gira 180 grados horizontalmente al pasar el mouse */
+    display: none;
+}
+
+.giratorio:hover .contenido_girado {
+    display: block;
+}
